@@ -1,0 +1,27 @@
+# Copyright (C) Skale-5 <ops@skale-5.com>
+
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+repos:
+  - repo: local
+    hooks:
+      - id: cookiecutter
+        name: cookiecutter-eks
+        entry: scripts/cookiecutter.sh
+        language: script
+        pass_filenames: false
+
+      - id: check-yaml
+        name: check-yaml
+        entry: find example/ -name "*.yaml" -exec yq eval {} +
+        language: system
+        pass_filenames: false
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+        exclude: /secrets
+      - id: check-added-large-files
