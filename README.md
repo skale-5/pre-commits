@@ -16,7 +16,7 @@ git submodule add git@git.sk5.io:skale-5/pre-commits.git
 Créer un lien pre-commit voulu
 
 ```bash
-ln -s pre-commits/pre-commit-XXXXX.yaml .pre-commit.config.yaml
+ln -s pre-commits/pre-commit-XXXXX.yaml .pre-commit-config.yaml
 ```
 ## Ajouter des nouveaux pre-commits
 
