@@ -10,7 +10,7 @@ Il est également utilisé pour les repos internes Skale 5 comme les cookiecutte
 Ajouter le submodule
 
 ```bash
-git add submodule git@git.sk5.io:skale-5/pre-commits.git
+git submodule add git@git.sk5.io:skale-5/pre-commits.git
 ```
 
 Créer un lien pre-commit voulu
