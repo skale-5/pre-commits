@@ -19,11 +19,12 @@ Créer un lien pre-commit voulu
 ln -s pre-commits/pre-commit-XXXXX.yaml .pre-commit-config.yaml
 ```
 
-## Update le submodule
+## Update les submodules
 
 ```bash
-git pull --recurse-submodules
+git submodule foreach git pull origin main
 ```
+
 ## Ajouter des nouveaux pre-commits
 
 Attention, il n'est pas possible de rajouter facilement des precommits custom.
