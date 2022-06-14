@@ -7,6 +7,6 @@ pushd ..
 for test in $(ls tests/*.json); do
     filename=$(basename -- "$test")
     filename="${filename%.*}"
-    cookiecutter "$DIR" -f --config-file "$test" --no-input --output-dir "$DIR"/example/"$test"
+    cookiecutter "$DIR" -f --config-file "$test" --no-input --output-dir "$DIR"/example/"$filename"
 done
 popd || exit
