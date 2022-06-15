@@ -14,7 +14,7 @@ repos:
 
       - id: check-yaml
         name: check-yaml
-        entry: find example/ -name "*.yaml" -exec yq eval {} +
+        entry: find example/ -name "*.yaml" -not -path "*/templates/*" -exec yq eval {} +
         language: system
         pass_filenames: false
 

@@ -3,6 +3,8 @@
 
 DIR=$(basename "$(pwd)")
 
+rm -rf example/
+
 pushd ..
 for test in $(ls ${DIR}/tests/*.json); do
     filename=$(basename -- "$test")
