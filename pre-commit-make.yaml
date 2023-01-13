@@ -1,0 +1,42 @@
+# Copyright (C) Skale-5 <ops@skale-5.com>
+
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+repos:
+  - repo: local
+    hooks:
+      - id: cookiecutter
+        name: cookiecutter
+        entry: pre-commits/scripts/cookiecutter.sh
+        language: script
+        pass_filenames: false
+
+      - id: check-yaml
+        name: check-yaml
+        entry: find example/ -name "*.yaml" -not -path "*/templates/*" -exec yq eval {} +
+        language: system
+        pass_filenames: false
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+        exclude: /secrets
+      - id: check-added-large-files
+      - id: check-yaml
+        args:
+        - '--allow-multiple-documents'
+        exclude: /templates|/secrets
+#COMMIT LINTER
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v1.3.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+#GITLAB LINTER
+  - repo: https://github.com/bjd2385/pre-commit-gitlabci-lint
+    rev: <latest release>
+    hooks:
+      - id: gitlabci-lint
