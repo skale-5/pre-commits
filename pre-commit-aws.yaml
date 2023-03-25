@@ -16,6 +16,7 @@ repos:
         exclude: /templates|/secrets
       - id: check-json
       - id: check-toml
+      - id: check-shebang-scripts-are-executable
 
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v2.1.1
