@@ -1,5 +1,8 @@
 # pre-commits
 
+[![pipeline status](https://git.sk5.io/skale-5/pre-commits/badges/main/pipeline.svg)](https://git.sk5.io/skale-5/pre-commits/-/commits/main)
+[![Latest Release](https://git.sk5.io/skale-5/pre-commits/-/badges/release.svg)](https://git.sk5.io/skale-5/pre-commits/-/releases)
+
 Ce repo vise à centraliser la gestion des pre-commits utilisés à Skale-5.
 Ce repo est intégré comme un submodule git dans les repos d' client.
 
