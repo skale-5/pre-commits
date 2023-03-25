@@ -1,0 +1,7 @@
+stages:
+  - release
+
+include:
+  - project: 'skale-5/gitlab-ci'
+    ref: main
+    file: '/templates/workflows/.gitlab-ci.common.yml'
