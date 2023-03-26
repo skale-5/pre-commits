@@ -3,6 +3,23 @@ default_install_hook_types:
   - commit-msg
 
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+        stages: [pre-commit]
+      - id: end-of-file-fixer
+        exclude: /secrets
+        stages: [pre-commit]
+      - id: check-added-large-files
+        stages: [pre-commit]
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v2.1.1
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+
   - repo: local
     hooks:
       - id: cookiecutter
@@ -17,15 +34,4 @@ repos:
         entry: find example/ -name "*.yaml" -not -path "*/templates/*" -exec yq eval {} +
         language: system
         pass_filenames: false
-        stages: [pre-commit]
-
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
-    hooks:
-      - id: trailing-whitespace
-        stages: [pre-commit]
-      - id: end-of-file-fixer
-        exclude: /secrets
-        stages: [pre-commit]
-      - id: check-added-large-files
         stages: [pre-commit]
