@@ -1,3 +1,13 @@
+# [1.1.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.0.0...v1.1.0) (2023-03-26)
+
+
+### Features
+
+* add check-json ([743252b](https://git.sk5.io/skale-5/pre-commits/commit/743252bc1ba344cb0121b70dad428c16071d8ea0))
+* add check-shebang-scripts-are-executable ([58b414a](https://git.sk5.io/skale-5/pre-commits/commit/58b414ad43f12aa3bc04e7ca30e52be10c6630d8))
+* add check-toml ([dff70c2](https://git.sk5.io/skale-5/pre-commits/commit/dff70c2a79c2dca38ba6693c4786e5b1b527f545))
+* add tfsec precommit on aws and gcp ([72c054b](https://git.sk5.io/skale-5/pre-commits/commit/72c054b848e684e24201b2399dd2c32155a0d2b7))
+
 # 1.0.0 (2023-03-25)
 
 
