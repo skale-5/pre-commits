@@ -22,6 +22,15 @@ repos:
 
   - repo: local
     hooks:
+      - id: gitleaks
+        name: Detect hardcoded secrets
+        description: Detect hardcoded secrets using Gitleaks
+        entry: pre-commits/scripts/run-gitleaks.sh
+        language: script
+        pass_filenames: false
+
+  - repo: local
+    hooks:
       - id: cookiecutter
         name: cookiecutter
         entry: pre-commits/scripts/cookiecutter.sh
