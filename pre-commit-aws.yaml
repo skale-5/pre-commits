@@ -7,23 +7,23 @@ repos:
     rev: v4.4.0
     hooks:
       - id: trailing-whitespace
-        stages: [pre-commit]
+        stages: [commit]
       - id: end-of-file-fixer
         exclude: /secrets
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-added-large-files
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-yaml
         args:
         - '--allow-multiple-documents'
         exclude: /templates|/secrets
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-json
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-toml
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-shebang-scripts-are-executable
-        stages: [pre-commit]
+        stages: [commit]
 
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v2.1.1
@@ -39,6 +39,7 @@ repos:
         entry: pre-commits/scripts/run-gitleaks.sh
         language: script
         pass_filenames: false
+        stages: [commit]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.77.1
@@ -47,9 +48,9 @@ repos:
         args:
         - --args=-diff
         - --args=-write=true
-        stages: [pre-commit]
+        stages: [commit]
       - id: terraform_docs
-        stages: [pre-commit]
+        stages: [commit]
       - id: terraform_tflint
         files: \.tf$
         args:
@@ -64,7 +65,7 @@ repos:
         - '--args=--enable-rule=terraform_required_providers'
         - '--args=--enable-rule=terraform_unused_required_providers'
         - '--args=--enable-rule=terraform_standard_module_structure'
-        stages: [pre-commit]
+        stages: [commit]
       - id: terraform_tfsec
         files: ^.
-        stages: [pre-commit]
+        stages: [commit]

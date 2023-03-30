@@ -7,12 +7,12 @@ repos:
     rev: v4.4.0
     hooks:
       - id: trailing-whitespace
-        stages: [pre-commit]
+        stages: [commit]
       - id: end-of-file-fixer
         exclude: /secrets
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-added-large-files
-        stages: [pre-commit]
+        stages: [commit]
 
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v2.1.1
@@ -28,6 +28,7 @@ repos:
         entry: pre-commits/scripts/run-gitleaks.sh
         language: script
         pass_filenames: false
+        stages: [commit]
 
   - repo: local
     hooks:
@@ -36,11 +37,11 @@ repos:
         entry: pre-commits/scripts/cookiecutter.sh
         language: script
         pass_filenames: false
-        stages: [pre-commit]
+        stages: [commit]
 
       - id: check-yaml
         name: check-yaml
         entry: find example/ -name "*.yaml" -not -path "*/templates/*" -exec yq eval {} +
         language: system
         pass_filenames: false
-        stages: [pre-commit]
+        stages: [commit]

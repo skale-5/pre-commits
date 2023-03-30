@@ -7,23 +7,23 @@ repos:
     rev: v4.4.0
     hooks:
       - id: trailing-whitespace
-        stages: [pre-commit]
+        stages: [commit]
       - id: end-of-file-fixer
         exclude: /secrets
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-added-large-files
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-yaml
         args:
         - '--allow-multiple-documents'
         exclude: /templates|/secrets
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-json
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-toml
-        stages: [pre-commit]
+        stages: [commit]
       - id: check-shebang-scripts-are-executable
-        stages: [pre-commit]
+        stages: [commit]
 
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v2.1.1
