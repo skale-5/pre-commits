@@ -1,6 +1,3 @@
-stages:
-  - release
-
 include:
   - project: 'skale-5/gitlab-ci'
     ref: main
