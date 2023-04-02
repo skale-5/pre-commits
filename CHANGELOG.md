@@ -1,3 +1,17 @@
+# [1.2.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.1.0...v1.2.0) (2023-04-02)
+
+
+### Bug Fixes
+
+* run pre-commits only on one stage (pre-commit/commit-msg) ([961b039](https://git.sk5.io/skale-5/pre-commits/commit/961b0392131676bed32fe34f1b860ce3c645cf16))
+* use commit stage instead of inexistent pre-commit stage ([5dcf7d5](https://git.sk5.io/skale-5/pre-commits/commit/5dcf7d597f8271f791fc968aa8af4b4899bf9e5f))
+
+
+### Features
+
+* **cookiecutter:** force conventional commit ([73c4e8e](https://git.sk5.io/skale-5/pre-commits/commit/73c4e8e2b4fb67c2f0addab01c0cda564980bcbe))
+* prevent secret to be commited using gitleaks ([32f1e06](https://git.sk5.io/skale-5/pre-commits/commit/32f1e06626f83da58308ee6f46fb6a84b9357f31))
+
 # [1.1.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.0.0...v1.1.0) (2023-03-26)
 
 
