@@ -1,0 +1,76 @@
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+        stages: [commit]
+      - id: end-of-file-fixer
+        exclude: /secrets
+        stages: [commit]
+      - id: check-added-large-files
+        stages: [commit]
+      - id: check-yaml
+        args:
+        - '--allow-multiple-documents'
+        exclude: /templates|/secrets
+        stages: [commit]
+      - id: check-json
+        stages: [commit]
+      - id: check-toml
+        stages: [commit]
+      - id: check-shebang-scripts-are-executable
+        stages: [commit]
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v2.1.1
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+
+  - repo: local
+    hooks:
+      - id: gitleaks
+        name: Detect hardcoded secrets
+        description: Detect hardcoded secrets using Gitleaks
+        entry: pre-commits/scripts/run-gitleaks.sh
+        language: script
+        pass_filenames: false
+        stages: [commit]
+
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.77.1
+    hooks:
+      - id: terraform_fmt
+        args:
+        - --args=-diff
+        - --args=-write=true
+        stages: [commit]
+      - id: terraform_docs
+        stages: [commit]
+      - id: terraform_tflint
+        files: \.tf$
+        args:
+            - --args=--config=__GIT_WORKING_DIR__/.tflint.hcl
+            - '--args=--enable-rule=terraform_deprecated_interpolation'
+            - '--args=--enable-rule=terraform_deprecated_index'
+            - '--args=--enable-rule=terraform_unused_declarations'
+            - '--args=--enable-rule=terraform_comment_syntax'
+            - '--args=--enable-rule=terraform_documented_outputs'
+            - '--args=--enable-rule=terraform_documented_variables'
+            - '--args=--enable-rule=terraform_typed_variables'
+            - '--args=--enable-rule=terraform_required_version'
+            - '--args=--enable-rule=terraform_required_providers'
+            - '--args=--enable-rule=terraform_unused_required_providers'
+            - '--args=--enable-rule=terraform_standard_module_structure'
+        stages: [commit]
+      - id: terraform_tfsec
+        files: \.tf$
+        args:
+          - >
+            --args=--config-file=__GIT_WORKING_DIR__/.tfsec.yml
+            --var-file example/terraform.tfvars
+        stages: [commit]
