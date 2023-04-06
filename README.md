@@ -1,11 +1,12 @@
 # pre-commits
 
-[![pipeline status](https://git.sk5.io/skale-5/pre-commits/badges/main/pipeline.svg)](https://git.sk5.io/skale-5/pre-commits/-/commits/main)
+[![pipeline status](https://git.sk5.io/skale-5/pre-commits/badges/main/pipeline.svg?ignore_skipped=true)](https://git.sk5.io/skale-5/pre-commits/-/commits/main)
 [![Latest Release](https://git.sk5.io/skale-5/pre-commits/-/badges/release.svg)](https://git.sk5.io/skale-5/pre-commits/-/releases)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
 Ce repo vise à centraliser la gestion des pre-commits utilisés à Skale-5.
-Ce repo est intégré comme un submodule git dans les repos d' client.
 
+Il est intégré comme un submodule git dans les repos des clients.
 Il est également utilisé pour les repos internes Skale 5 comme les cookiecutters.
 
 ## Installer les pre-commits dans un repo client existant
