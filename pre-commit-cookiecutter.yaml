@@ -31,6 +31,7 @@ repos:
         verbose: true
         stages: [commit]
 
+# Build cookiecutter based on tests scenarios
   - repo: local
     hooks:
       - id: cookiecutter
@@ -45,4 +46,25 @@ repos:
         entry: find example/ -name "*.yaml" -not -path "*/templates/*" -exec yq eval {} +
         language: system
         pass_filenames: false
+        stages: [commit]
+
+# Checks that the cookiecutter can helm templatize and that terraform is well formatted
+  - repo: local
+    hooks:
+      - id: helm-template
+        name: helm-template
+        entry: pre-commits/scripts/cookiecutter-helm.sh
+        language: script
+        pass_filenames: false
+        stages: [commit]
+
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.77.1
+    hooks:
+      - id: terraform_fmt
+        args:
+        - --args=-diff
+        - --args=-check
+        - --args=-write=false
+        files: \.tf$
         stages: [commit]
