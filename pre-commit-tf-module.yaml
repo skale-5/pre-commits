@@ -73,5 +73,5 @@ repos:
         args:
           - >
             --args=--config-file=__GIT_WORKING_DIR__/.tfsec.yml
-            --var-file example/terraform.tfvars
+            --var-file tests/terraform.tfvars
         stages: [commit]
