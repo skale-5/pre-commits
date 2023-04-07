@@ -39,6 +39,7 @@ repos:
         entry: pre-commits/scripts/run-gitleaks.sh
         language: script
         pass_filenames: false
+        verbose: true
         stages: [commit]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
@@ -58,4 +59,15 @@ repos:
       - id: helm-docs
         args:
           - --chart-search-root=manifests
+        stages: [commit]
+
+  - repo: local
+    hooks:
+      - id: helm-template
+        name: helm-template
+        description: Run helm-template with makefiles
+        entry: pre-commits/scripts/helm-template.sh
+        language: script
+        pass_filenames: false
+        verbose: true
         stages: [commit]

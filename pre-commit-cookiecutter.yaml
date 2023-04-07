@@ -28,6 +28,7 @@ repos:
         entry: pre-commits/scripts/run-gitleaks.sh
         language: script
         pass_filenames: false
+        verbose: true
         stages: [commit]
 
   - repo: local
