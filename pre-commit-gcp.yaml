@@ -51,3 +51,11 @@ repos:
         stages: [commit]
       - id: terraform_docs
         stages: [commit]
+
+  - repo: https://github.com/norwoodj/helm-docs
+    rev: v1.11.0
+    hooks:
+      - id: helm-docs
+        args:
+          - --chart-search-root=manifests
+        stages: [commit]
