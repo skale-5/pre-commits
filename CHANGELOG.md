@@ -1,3 +1,20 @@
+# [1.3.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.2.0...v1.3.0) (2023-04-09)
+
+
+### Bug Fixes
+
+* check if find and sed are GNU compliant ([1ec361f](https://git.sk5.io/skale-5/pre-commits/commit/1ec361f357a72acc04d7651f448494481800d71d))
+* improve pre-commit exec time with big repositories ([b9f241b](https://git.sk5.io/skale-5/pre-commits/commit/b9f241b66a1fa6e80e94c11405093c55e35c5d8d))
+* **tfsec:** change example to test ([81e10b1](https://git.sk5.io/skale-5/pre-commits/commit/81e10b1fbc1592ef91353b8943823567ad7df00c))
+
+
+### Features
+
+* add cookiecutter tests ([3a0e6e6](https://git.sk5.io/skale-5/pre-commits/commit/3a0e6e647f1dea3ea197a7854a75ddf041770462))
+* add helm-docs for gcp and aws pre-commits ([40f5e79](https://git.sk5.io/skale-5/pre-commits/commit/40f5e7954e6631873fc7bd8f617f06e44edb493f))
+* add helm-template ([1587b28](https://git.sk5.io/skale-5/pre-commits/commit/1587b28176de710b3c264230d2715ccba75b70af))
+* add tfmodule pre-commits ([ac4f634](https://git.sk5.io/skale-5/pre-commits/commit/ac4f634566e45a08402efe3a152a75cbc37717b2))
+
 # [1.2.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.1.0...v1.2.0) (2023-04-02)
 
 
