@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./check-gnu-binary.sh
+source ./pre-commits/scripts/check-gnu-binary.sh
 is_gnu_binary find || exit 1
 is_gnu_binary sed || exit 1
 
