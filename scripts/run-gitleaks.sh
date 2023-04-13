@@ -11,7 +11,7 @@ if command -v gitleaks; then
     # If git-crypt is used, stash modification, lock repo and apply stash
     # We need to stash because lock cannot be done without
     [ -d ".git/git-crypt" ] &&
-    git stash && git-crypt lock && git stash apply
+    git stash -q && git-crypt lock --force && git stash apply -q
 
     # run gitleaks on locked repo
     # it doesn't trigger on files encrypted by git-crypt
