@@ -53,18 +53,14 @@ repos:
     hooks:
       - id: helm-template
         name: helm-template
-        entry: pre-commits/scripts/cookiecutter-helm.sh
+        entry: pre-commits/scripts/cookiecutter-helm-template.sh
         language: script
         pass_filenames: false
         stages: [commit]
 
-  - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.77.1
-    hooks:
-      - id: terraform_fmt
-        args:
-        - --args=-diff
-        - --args=-check
-        - --args=-write=false
-        files: \.tf$
+      - id: terraform-fmt
+        name: terraform-fmt
+        entry: pre-commits/scripts/cookiecutter-terraform-fmt.sh
+        language: script
+        pass_filenames: false
         stages: [commit]
