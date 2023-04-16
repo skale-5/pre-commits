@@ -1,3 +1,12 @@
+## [1.3.1](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.0...v1.3.1) (2023-04-16)
+
+
+### Bug Fixes
+
+* add --force to git-crypt lock and quiet git stash ([6993450](https://git.sk5.io/skale-5/pre-commits/commit/6993450789c999ef6bcdc656fbe5ea63af939ec9))
+* fix helm-template and terraform fmt for cookiecutters ([9ad1980](https://git.sk5.io/skale-5/pre-commits/commit/9ad1980adc57d9c1463880121b19f11983dc4400))
+* **helm-template:** fix script path ([8f53b60](https://git.sk5.io/skale-5/pre-commits/commit/8f53b60d7fa0e9aa419afe923cfaf22b6ac843c5))
+
 # [1.3.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.2.0...v1.3.0) (2023-04-09)
 
 
