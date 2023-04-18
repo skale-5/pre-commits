@@ -48,6 +48,7 @@ repos:
       - id: terraform_fmt
         args:
         - --args=-diff
+        - --args=-recursive
         - --args=-write=true
         stages: [commit]
       - id: terraform_docs
