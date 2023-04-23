@@ -1,3 +1,10 @@
+## [1.3.2](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.1...v1.3.2) (2023-04-23)
+
+
+### Bug Fixes
+
+* add recursive mode to tf fmt ([a07a082](https://git.sk5.io/skale-5/pre-commits/commit/a07a082ea9e1d1a01092bcafefb6896076f7c34d))
+
 ## [1.3.1](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.0...v1.3.1) (2023-04-16)
 
 
