@@ -11,17 +11,26 @@ Il est également utilisé pour les repos internes Skale 5 comme les cookiecutte
 
 ## Installer les pre-commits dans un repo client existant
 
-Ajouter le submodule
+Ajouter le submodule :
 
 ```bash
 git submodule add git@git.sk5.io:skale-5/pre-commits.git
 ```
 
-Créer un lien pre-commit voulu
+Si on veut donner l'accès public à la place :
+
+```bash
+git submodule add git@github.com:skale-5/pre-commits.git
+```
+
+Créer un lien avec le pre-commit voulu :
 
 ```bash
 ln -s pre-commits/pre-commit-XXXXX.yaml .pre-commit-config.yaml
 ```
+
+
+
 
 ## Update les submodules
 
