@@ -5,7 +5,11 @@ if command -v gitleaks; then
 
     # Copy current repo in /tmp to not disturb dev process
     TMP_DIR=$(mktemp -d /tmp/"$DIR".XXXXXX)
-    rsync -aq --exclude-from=.gitignore "$(pwd)" "$TMP_DIR"
+    if [ -f .gitignore ]; then
+        rsync -aq --exclude-from=.gitignore "$(pwd)" "$TMP_DIR"
+    else
+        rsync -aq "$(pwd)" "$TMP_DIR"
+    fi
     cd "$TMP_DIR"/"$DIR" || exit 1
 
     # If git-crypt is used, stash modification, lock repo and apply stash
