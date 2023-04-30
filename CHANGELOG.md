@@ -1,3 +1,10 @@
+## [1.3.3](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.2...v1.3.3) (2023-04-30)
+
+
+### Bug Fixes
+
+* **gitleaks:** bug when gitiginore doesn't exist ([bb0ebc5](https://git.sk5.io/skale-5/pre-commits/commit/bb0ebc57584cbb997ae79d60921b56e16a8f917c)), closes [#12](https://git.sk5.io/skale-5/pre-commits/issues/12)
+
 ## [1.3.2](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.1...v1.3.2) (2023-04-23)
 
 
