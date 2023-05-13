@@ -28,7 +28,7 @@ repos:
         entry: pre-commits/scripts/run-gitleaks.sh
         language: script
         pass_filenames: false
-        verbose: true
+        verbose: false
         stages: [commit]
 
 # Build cookiecutter based on tests scenarios
