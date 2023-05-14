@@ -1,3 +1,10 @@
+## [1.3.4](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.3...v1.3.4) (2023-05-14)
+
+
+### Bug Fixes
+
+* remove gitleaks output ([26de36a](https://git.sk5.io/skale-5/pre-commits/commit/26de36a552bd692d042badd57e62b2cfa67a3a37))
+
 ## [1.3.3](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.2...v1.3.3) (2023-04-30)
 
 
