@@ -31,15 +31,10 @@ repos:
       - id: conventional-pre-commit
         stages: [commit-msg]
 
-  - repo: local
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.16.3
     hooks:
       - id: gitleaks
-        name: Detect hardcoded secrets
-        description: Detect hardcoded secrets using Gitleaks
-        entry: pre-commits/scripts/run-gitleaks.sh
-        language: script
-        pass_filenames: false
-        verbose: false
         stages: [commit]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
