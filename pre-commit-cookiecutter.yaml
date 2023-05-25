@@ -26,6 +26,12 @@ repos:
       - id: gitleaks
         stages: [commit]
 
+  - repo: git@git.sk5.io:skale-5/docker-images/cookiecutter-docs.git
+    rev: v1.1.1
+    hooks:
+      - id: cookiecutter-docs
+        name: cookiecutter-docs
+
 # Build cookiecutter based on tests scenarios
   - repo: local
     hooks:
