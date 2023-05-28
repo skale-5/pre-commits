@@ -1,3 +1,17 @@
+# [1.4.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.4...v1.4.0) (2023-05-28)
+
+
+### Bug Fixes
+
+* **cookiecutter-docs:** fix stage ([9447cf3](https://git.sk5.io/skale-5/pre-commits/commit/9447cf3f9e66ad5b6415daa03fcf73e3c82e08e1))
+
+
+### Features
+
+* add cookiecutter-docs pre-commit ([3a8294b](https://git.sk5.io/skale-5/pre-commits/commit/3a8294bbd7ccd8e864ff50c053f70ce16b9dfbcb))
+* add python reusable pre-commit ([b73762e](https://git.sk5.io/skale-5/pre-commits/commit/b73762e8b59dd5e0a406843abff6209c9e2558d6))
+* use official gitleaks hook when ther is no way git-crypt is used ([0980b7d](https://git.sk5.io/skale-5/pre-commits/commit/0980b7d87d9363a25d7c2c132e32eecf1ab6d2fe))
+
 ## [1.3.4](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.3...v1.3.4) (2023-05-14)
 
 
