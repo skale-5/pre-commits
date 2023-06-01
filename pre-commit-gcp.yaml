@@ -15,7 +15,7 @@ repos:
         stages: [commit]
       - id: check-yaml
         args:
-        - '--allow-multiple-documents'
+          - "--allow-multiple-documents"
         exclude: /templates|/secrets
         stages: [commit]
       - id: check-json
@@ -47,9 +47,10 @@ repos:
     hooks:
       - id: terraform_fmt
         args:
-        - --args=-diff
-        - --args=-recursive
-        - --args=-write=true
+          - --args=-diff
+          - --args=-recursive
+          - --args=-write=true
+        exclude: /cookiecutters
         stages: [commit]
       - id: terraform_docs
         stages: [commit]
