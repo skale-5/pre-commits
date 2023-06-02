@@ -29,8 +29,11 @@ Créer un lien avec le pre-commit voulu :
 ln -s pre-commits/pre-commit-XXXXX.yaml .pre-commit-config.yaml
 ```
 
+Puis pour activer les pre-commit installés dans le repo :
 
-
+```bash
+pre-commit --install
+```
 
 ## Update les submodules
 
