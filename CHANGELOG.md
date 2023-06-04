@@ -1,3 +1,10 @@
+# [1.5.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.4.0...v1.5.0) (2023-06-04)
+
+
+### Features
+
+* **terraform_fmt:** Exclude /cookiecutters from the fmt check ([2bb4445](https://git.sk5.io/skale-5/pre-commits/commit/2bb4445c937bc1963046fe3cd55fd07aa6ac4030))
+
 # [1.4.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.3.4...v1.4.0) (2023-05-28)
 
 
