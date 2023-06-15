@@ -44,3 +44,11 @@ repos:
         args:
           - --chart-search-root=.
         stages: [commit]
+
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.22
+    hooks:
+      - id: helmlint
+        args:
+          - --strict
+        stages: [commit]
