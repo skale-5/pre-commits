@@ -1,3 +1,11 @@
+# [1.6.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.5.0...v1.6.0) (2023-06-18)
+
+
+### Features
+
+* add helm lint ([a9c8eef](https://git.sk5.io/skale-5/pre-commits/commit/a9c8eef93d9ef5af233efad922773fedbc2b9831))
+* add new workflow for helm charts ([3369df6](https://git.sk5.io/skale-5/pre-commits/commit/3369df602be5eecc51639d0e3efa93b048b5237d))
+
 # [1.5.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.4.0...v1.5.0) (2023-06-04)
 
 
