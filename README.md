@@ -20,7 +20,7 @@ git submodule add git@git.sk5.io:skale-5/pre-commits.git
 Si on veut donner l'accès public à la place :
 
 ```bash
-git submodule add git@github.com:skale-5/pre-commits.git
+git submodule add https://github.com/skale-5/pre-commits.git
 ```
 
 Créer un lien avec le pre-commit voulu :
