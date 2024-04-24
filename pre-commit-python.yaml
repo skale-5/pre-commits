@@ -15,8 +15,8 @@ repos:
         stages: [commit]
       - id: check-yaml
         args:
-        - '--allow-multiple-documents'
-        exclude: /templates|/secrets
+          - --allow-multiple-documents
+        exclude: /templates|/secrets|helmfile.yaml
         stages: [commit]
       - id: check-json
         stages: [commit]
