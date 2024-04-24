@@ -4,7 +4,7 @@ default_install_hook_types:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.6.0
     hooks:
       - id: trailing-whitespace
         stages: [commit]
@@ -26,7 +26,7 @@ repos:
         stages: [commit]
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v2.3.0
+    rev: v3.2.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
@@ -43,7 +43,7 @@ repos:
         stages: [commit]
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.81.0
+    rev: v1.89.0
     hooks:
       - id: terraform_fmt
         args:
@@ -56,7 +56,7 @@ repos:
         stages: [commit]
 
   - repo: https://github.com/norwoodj/helm-docs
-    rev: v1.11.0
+    rev: v1.13.1
     hooks:
       - id: helm-docs
         args:
