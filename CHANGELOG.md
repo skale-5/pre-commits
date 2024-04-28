@@ -1,3 +1,10 @@
+## [1.6.1](https://git.sk5.io/skale-5/pre-commits/compare/v1.6.0...v1.6.1) (2024-04-28)
+
+
+### Bug Fixes
+
+* **check-yaml:** exclude helmfile.yaml since it contains helm syntax ([d0ff8b3](https://git.sk5.io/skale-5/pre-commits/commit/d0ff8b39b344629fb2986a92723099c48f306e0e))
+
 # [1.6.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.5.0...v1.6.0) (2023-06-18)
 
 
