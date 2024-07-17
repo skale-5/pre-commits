@@ -43,6 +43,7 @@ repos:
       - id: helm-docs
         args:
           - --chart-search-root=.
+          - --skip-version-footer
         stages: [commit]
 
   - repo: https://github.com/gruntwork-io/pre-commit

@@ -61,6 +61,7 @@ repos:
       - id: helm-docs
         args:
           - --chart-search-root=manifests
+          - --skip-version-footer
         stages: [commit]
 
   - repo: local
