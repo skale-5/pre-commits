@@ -1,3 +1,10 @@
+# [1.7.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.6.1...v1.7.0) (2024-07-21)
+
+
+### Features
+
+* **helm-docs:** remove version footer causing multiple re-writes depending on user's tool version ([5386859](https://git.sk5.io/skale-5/pre-commits/commit/53868596ba3ae43afb7b6a828647531922bb6089))
+
 ## [1.6.1](https://git.sk5.io/skale-5/pre-commits/compare/v1.6.0...v1.6.1) (2024-04-28)
 
 
