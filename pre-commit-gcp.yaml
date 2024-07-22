@@ -24,6 +24,7 @@ repos:
         stages: [commit]
       - id: check-shebang-scripts-are-executable
         stages: [commit]
+        exclude: .+\.j2$
 
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v3.2.0
