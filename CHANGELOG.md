@@ -1,3 +1,10 @@
+## [1.7.1](https://git.sk5.io/skale-5/pre-commits/compare/v1.7.0...v1.7.1) (2024-07-28)
+
+
+### Bug Fixes
+
+* **check-shebang-scripts-are-executable:** exclude jinja templates from check ([55e4545](https://git.sk5.io/skale-5/pre-commits/commit/55e4545ccfb6362209d074245663a7f46ab13708))
+
 # [1.7.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.6.1...v1.7.0) (2024-07-21)
 
 
