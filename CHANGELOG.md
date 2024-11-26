@@ -1,3 +1,10 @@
+# [1.8.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.7.1...v1.8.0) (2024-11-26)
+
+
+### Features
+
+* **pre-commit-gcp:** update pre-commit-gcp.yaml file ([3c3a61a](https://git.sk5.io/skale-5/pre-commits/commit/3c3a61a879b1b0443f51b6dacf7cd863affbdaa0))
+
 ## [1.7.1](https://git.sk5.io/skale-5/pre-commits/compare/v1.7.0...v1.7.1) (2024-07-28)
 
 
