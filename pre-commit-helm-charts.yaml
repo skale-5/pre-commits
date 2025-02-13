@@ -45,6 +45,7 @@ repos:
         args:
           - --chart-search-root=.
           - --skip-version-footer
+          - --template-files=../pre-commits/README.md.gotmpl
         stages: [commit]
 
   - repo: https://github.com/gruntwork-io/pre-commit

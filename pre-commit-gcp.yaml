@@ -63,6 +63,7 @@ repos:
         args:
           - --chart-search-root=manifests
           - --skip-version-footer
+          - --template-files=../pre-commits/README.md.gotmpl
         stages: [pre-commit]
 
   - repo: local
