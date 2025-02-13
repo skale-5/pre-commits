@@ -4,54 +4,54 @@ default_install_hook_types:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
-        stages: [commit]
+        stages: [pre-commit]
       - id: end-of-file-fixer
         exclude: /secrets
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-added-large-files
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-yaml
         args:
           - --allow-multiple-documents
         exclude: /templates|/secrets|helmfile.yaml
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-json
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-toml
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-shebang-scripts-are-executable
-        stages: [commit]
+        stages: [pre-commit]
         exclude: .+\.j2$
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v2.3.0
+    rev: v4.0.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.16.4
+    rev: v8.23.3
     hooks:
       - id: gitleaks
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: https://github.com/norwoodj/helm-docs
-    rev: v1.11.0
+    rev: v1.14.2
     hooks:
       - id: helm-docs
         args:
           - --chart-search-root=.
           - --skip-version-footer
           - --template-files=../pre-commits/README.md.gotmpl
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.22
+    rev: v0.1.25
     hooks:
       - id: helmlint
         args:
           - --strict
-        stages: [commit]
+        stages: [pre-commit]

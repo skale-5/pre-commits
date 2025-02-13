@@ -4,34 +4,34 @@ default_install_hook_types:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
-        stages: [commit]
+        stages: [pre-commit]
       - id: end-of-file-fixer
         exclude: /secrets
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-added-large-files
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v2.3.0
+    rev: v4.0.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.16.4
+    rev: v8.23.3
     hooks:
       - id: gitleaks
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: git@git.sk5.io:skale-5/docker-images/cookiecutter-docs.git
-    rev: v1.1.2
+    rev: v1.1.7
     hooks:
       - id: cookiecutter-docs
         name: cookiecutter-docs
-        stages: [commit]
+        stages: [pre-commit]
 
 
 # Build cookiecutter based on tests scenarios
@@ -42,14 +42,14 @@ repos:
         entry: pre-commits/scripts/cookiecutter.sh
         language: script
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]
 
       - id: check-yaml
         name: check-yaml
         entry: find example/ -name "*.yaml" -not -path "*/templates/*" -exec yq eval {} +
         language: system
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]
 
 # Checks that the cookiecutter can helm templatize and that terraform is well formatted
   - repo: local
@@ -59,11 +59,11 @@ repos:
         entry: pre-commits/scripts/cookiecutter-helm-template.sh
         language: script
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]
 
       - id: terraform-fmt
         name: terraform-fmt
         entry: pre-commits/scripts/cookiecutter-terraform-fmt.sh
         language: script
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]

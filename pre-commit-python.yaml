@@ -4,66 +4,66 @@ default_install_hook_types:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
-        stages: [commit]
+        stages: [pre-commit]
       - id: end-of-file-fixer
         exclude: /secrets
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-added-large-files
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-yaml
         args:
           - --allow-multiple-documents
         exclude: /templates|/secrets|helmfile.yaml
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-json
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-toml
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-shebang-scripts-are-executable
-        stages: [commit]
+        stages: [pre-commit]
         exclude: .+\.j2$
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v2.3.0
+    rev: v4.0.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.16.4
+    rev: v8.23.3
     hooks:
       - id: gitleaks
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 25.1.0
     hooks:
       - id: black
         args: ["--line-length", "120"]
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: https://github.com/pycqa/isort
-    rev: 5.12.0
+    rev: 6.0.0
     hooks:
       - id: isort
         additional_dependencies: [toml]
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: https://github.com/pycqa/pylint
-    rev: v2.17.4
+    rev: v3.3.4
     hooks:
       - id: pylint
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.3.0
+    rev: v1.15.0
     hooks:
       - id: mypy
         args:
           - --strict
           - --ignore-missing-imports
           - --non-interactive
-        stages: [commit]
+        stages: [pre-commit]
