@@ -1,3 +1,15 @@
+# [1.9.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.8.0...v1.9.0) (2025-02-16)
+
+
+### Bug Fixes
+
+* **helm-docs:** use custom template to fix conflicts with end-of-file-fixer ([dbd156d](https://git.sk5.io/skale-5/pre-commits/commit/dbd156de1f283efcce93d823da93f591991dc17e))
+
+
+### Features
+
+* update all pre-commits ([26d8c52](https://git.sk5.io/skale-5/pre-commits/commit/26d8c52358dc98855ae492d0ea59b2ccd7aa5565))
+
 # [1.8.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.7.1...v1.8.0) (2024-11-26)
 
 
