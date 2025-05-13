@@ -27,13 +27,13 @@ repos:
         exclude: .+\.j2$
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v4.0.0
+    rev: v4.2.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.23.3
+    rev: v8.26.0
     hooks:
       - id: gitleaks
         stages: [pre-commit]
@@ -49,7 +49,7 @@ repos:
         stages: [pre-commit]
 
   - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.25
+    rev: v0.1.29
     hooks:
       - id: helmlint
         args:
