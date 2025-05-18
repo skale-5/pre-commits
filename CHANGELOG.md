@@ -1,3 +1,10 @@
+# [1.10.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.9.0...v1.10.0) (2025-05-18)
+
+
+### Features
+
+* **python:** replace black & isort with ruff ([2a8d8a5](https://git.sk5.io/skale-5/pre-commits/commit/2a8d8a54b271666ed442d83199ccd44476bdecc1))
+
 # [1.9.0](https://git.sk5.io/skale-5/pre-commits/compare/v1.8.0...v1.9.0) (2025-02-16)
 
 
